@@ -4,51 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SkillTube - Empowering Artisans</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        padding: 0;
-        background-color: #f8f9fa;
-      }
-      .container {
-        max-width: 800px;
-        margin: auto;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      .card {
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background: #fff;
-        margin-bottom: 20px;
-      }
-      button {
-        background: #007bff;
-        color: white;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      button:hover {
-        background: #0056b3;
-      }
-      .video {
-        width: 100%;
-        border-radius: 5px;
-      }
-      .actions {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="css.css.css" />
   </head>
   <body>
+    <script src="skilltube.js"></script>
     <div class="container">
       <h1>SkillTube - Empowering Artisans</h1>
 
@@ -63,6 +22,38 @@
           placeholder="Describe your work"
           style="width: 100%; margin-bottom: 10px"
         ></textarea>
+
+        <select
+          id="city"
+          style="width: 100%; margin-bottom: 10px"
+          onchange="updateTowns()"
+        >
+          <option value="">Select Your City</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Pune">Pune</option>
+        </select>
+
+        <div id="locationFields" style="display: none">
+          <select id="town" style="width: 100%; margin-bottom: 10px">
+            <option value="">Select Your Town</option>
+          </select>
+          <input
+            type="text"
+            placeholder="Your Address"
+            style="width: 100%; margin-bottom: 10px"
+          />
+        </div>
+
+        <input
+          type="text"
+          placeholder="Your Contact"
+          style="width: 100%; margin-bottom: 10px"
+        />
         <input type="file" style="margin-bottom: 10px" />
         <button>Upload</button>
       </div>
@@ -80,6 +71,7 @@
           <button>❤️ Like</button>
           <button>💬 Comment</button>
           <button>📞 Contact</button>
+          <button>📍 Location</button>
         </div>
       </div>
     </div>
