@@ -3,9 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>SkillTube - Empowering Artisans</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 0;
+        background-color: #f8f9fa;
+      }
+      .container {
+        max-width: 800px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      .card {
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background: #fff;
+        margin-bottom: 20px;
+      }
+      button {
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0056b3;
+      }
+      .video {
+        width: 100%;
+        border-radius: 5px;
+      }
+      .actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+    </style>
   </head>
   <body>
-    Dmce ki jai!
+    <div class="container">
+      <h1>SkillTube - Empowering Artisans</h1>
+
+      <div class="card">
+        <h2>Upload Your Work</h2>
+        <input
+          type="text"
+          placeholder="Video Title"
+          style="width: 100%; margin-bottom: 10px"
+        />
+        <textarea
+          placeholder="Describe your work"
+          style="width: 100%; margin-bottom: 10px"
+        ></textarea>
+        <input type="file" style="margin-bottom: 10px" />
+        <button>Upload</button>
+      </div>
+
+      <h2>Explore Artisans</h2>
+
+      <div class="card">
+        <video class="video" controls>
+          <source src="#" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <h3>Artisan Name</h3>
+        <p>Weaving | Mumbai</p>
+        <div class="actions">
+          <button>❤️ Like</button>
+          <button>💬 Comment</button>
+          <button>📞 Contact</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
