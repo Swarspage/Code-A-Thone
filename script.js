@@ -135,10 +135,23 @@ document.addEventListener("DOMContentLoaded", function () {
     alert("Form data saved successfully!");
   }
 
-  // Function to reset form and clear localStorage on reload
-  function resetFormData() {
-    localStorage.removeItem("skillTubeFormData"); // Clear stored data
-    form.reset(); // Reset form fields
+  // Load saved data on page load
+  function loadFormData() {
+    const savedData = localStorage.getItem("skillTubeFormData");
+    if (savedData) {
+      const formData = JSON.parse(savedData);
+      document.getElementById("artisanName").value = formData.artisanName || "";
+      document.getElementById("craftType").value = formData.craftType || "";
+      document.getElementById("workDescription").value =
+        formData.workDescription || "";
+      document.getElementById("experience").value = formData.experience || "";
+      document.getElementById("location").value = formData.location || "";
+      document.getElementById("contact").value = formData.contact || "";
+      document.getElementById("email").value = formData.email || "";
+      document.getElementById("tags").value = formData.tags || "";
+      document.getElementById("termsAgreement").checked =
+        formData.termsAgreement || false;
+    }
   }
 
   // Save data on form submission
@@ -152,6 +165,6 @@ document.addEventListener("DOMContentLoaded", function () {
     saveFormData();
   });
 
-  // Clear localStorage and reset form on page reload
-  resetFormData();
+  // Load data when the page loads
+  loadFormData();
 });
