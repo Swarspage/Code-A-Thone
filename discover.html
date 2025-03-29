@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Craftsmen - SkillTube</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="https://via.placeholder.com/150x50" alt="SkillTube Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html" class="active">Discover</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for crafts, artisans..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </header>
+
+    <main class="discover-main">
+      <div class="filter-section">
+        <h2>Filters</h2>
+        <div class="filter-group">
+          <h3>Craft Category</h3>
+          <div class="filter-options">
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="textiles" />
+              <span>Textiles & Clothing</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="pottery" />
+              <span>Pottery & Ceramics</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="jewelry" />
+              <span>Jewelry</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="woodwork" />
+              <span>Woodworking</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="painting" />
+              <span>Painting</span>
+            </label>
+            <label class="filter-option">
+              <input type="checkbox" name="category" value="handicraft" />
+              <span>Handicrafts</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Location</h3>
+          <select id="stateFilter" name="stateFilter">
+            <option value="">All States</option>
+            <option value="rajasthan">Rajasthan</option>
+            <option value="gujarat">Gujarat</option>
+            <option value="karnataka">Karnataka</option>
+            <option value="tamil-nadu">Tamil Nadu</option>
+            <option value="west-bengal">West Bengal</option>
+            <option value="uttar-pradesh">Uttar Pradesh</option>
+            <option value="madhya-pradesh">Madhya Pradesh</option>
+            <option value="kashmir">Kashmir</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <h3>Experience Level</h3>
+          <div class="experience-slider">
+            <input
+              type="range"
+              min="0"
+              max="50"
+              value="0"
+              id="experienceFilter"
+            />
+            <div class="experience-value">
+              <span id="experienceValue">0+</span> years
+            </div>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h3>Sort By</h3>
+          <select id="sortFilter" name="sortFilter">
+            <option value="popular">Most Popular</option>
+            <option value="recent">Most Recent</option>
+            <option value="ratings">Highest Rated</option>
+            <option value="experience">Most Experienced</option>
+          </select>
+        </div>
+
+        <button id="applyFilters" class="btn primary-btn">Apply Filters</button>
+        <button id="resetFilters" class="btn secondary-btn">
+          Reset Filters
+        </button>
+      </div>
+
+      <div class="discover-content">
+        <div class="discover-header">
+          <h1>Discover Talented Craftsmen</h1>
+          <div class="view-toggle">
+            <button class="view-btn active" data-view="grid">
+              <i class="fas fa-th"></i>
+            </button>
+            <button class="view-btn" data-view="list">
+              <i class="fas fa-list"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="video-grid" id="videoGrid">
+          <!-- Video items will be dynamically generated -->
+          <div class="video-item">
+            <div class="video-thumbnail">
+              <img
+                src="https://via.placeholder.com/320x180"
+                alt="Pottery Demonstration"
+              />
+              <span class="video-duration">4:27</span>
+              <button class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="video-info">
+              <h3>Traditional Pottery Making Techniques</h3>
+              <p class="video-creator">Ramesh Kumar</p>
+              <p class="video-location">
+                <i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan
+              </p>
+              <div class="video-stats">
+                <span><i class="fas fa-eye"></i> 1.2K views</span>
+                <span><i class="fas fa-heart"></i> 85</span>
+                <span><i class="fas fa-comment"></i> 12</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-thumbnail">
+              <img
+                src="https://via.placeholder.com/320x180"
+                alt="Handloom Weaving"
+              />
+              <span class="video-duration">7:15</span>
+              <button class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="video-info">
+              <h3>Intricate Banarasi Silk Saree Weaving</h3>
+              <p class="video-creator">Anita Devi</p>
+              <p class="video-location">
+                <i class="fas fa-map-marker-alt"></i> Varanasi, Uttar Pradesh
+              </p>
+              <div class="video-stats">
+                <span><i class="fas fa-eye"></i> 3.4K views</span>
+                <span><i class="fas fa-heart"></i> 203</span>
+                <span><i class="fas fa-comment"></i> 45</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-thumbnail">
+              <img
+                src="https://via.placeholder.com/320x180"
+                alt="Wood Carving"
+              />
+              <span class="video-duration">5:52</span>
+              <button class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="video-info">
+              <h3>Rosewood Carving Masterclass</h3>
+              <p class="video-creator">Prakash Iyer</p>
+              <p class="video-location">
+                <i class="fas fa-map-marker-alt"></i> Trivandrum, Kerala
+              </p>
+              <div class="video-stats">
+                <span><i class="fas fa-eye"></i> 876 views</span>
+                <span><i class="fas fa-heart"></i> 64</span>
+                <span><i class="fas fa-comment"></i> 8</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-thumbnail">
+              <img
+                src="https://via.placeholder.com/320x180"
+                alt="Jewelry Making"
+              />
+              <span class="video-duration">6:33</span>
+              <button class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="video-info">
+              <h3>Traditional Kundan Jewelry Crafting</h3>
+              <p class="video-creator">Sanjay Sharma</p>
+              <p class="video-location">
+                <i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan
+              </p>
+              <div class="video-stats">
+                <span><i class="fas fa-eye"></i> 2.1K views</span>
+                <span><i class="fas fa-heart"></i> 156</span>
+                <span><i class="fas fa-comment"></i> 27</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-thumbnail">
+              <img
+                src="https://via.placeholder.com/320x180"
+                alt="Block Printing"
+              />
+              <span class="video-duration">3:48</span>
+              <button class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="video-info">
+              <h3>Bagru Block Printing Process</h3>
+              <p class="video-creator">Lakshmi Choudhary</p>
+              <p class="video-location">
+                <i class="fas fa-map-marker-alt"></i> Bagru, Rajasthan
+              </p>
+              <div class="video-stats">
+                <span><i class="fas fa-eye"></i> 945 views</span>
+                <span><i class="fas fa-heart"></i> 78</span>
+                <span><i class="fas fa-comment"></i> 14</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-thumbnail">
+              <img
+                src="https://via.placeholder.com/320x180"
+                alt="Madhubani Painting"
+              />
+              <span class="video-duration">8:21</span>
+              <button class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="video-info">
+              <h3>Traditional Madhubani Painting Techniques</h3>
+              <p class="video-creator">Sunita Devi</p>
+              <p class="video-location">
+                <i class="fas fa-map-marker-alt"></i> Madhubani, Bihar
+              </p>
+              <div class="video-stats">
+                <span><i class="fas fa-eye"></i> 1.8K views</span>
+                <span><i class="fas fa-heart"></i> 134</span>
+                <span><i class="fas fa-comment"></i> 22</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-thumbnail">
+              <img
+                src="https://via.placeholder.com/320x180"
+                alt="Bronze Casting"
+              />
+              <span class="video-duration">7:05</span>
+              <button class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="video-info">
+              <h3>Lost-Wax Bronze Casting Process</h3>
+              <p class="video-creator">Ravi Kumar</p>
+              <p class="video-location">
+                <i class="fas fa-map-marker-alt"></i> Swamimalai, Tamil Nadu
+              </p>
+              <div class="video-stats">
+                <span><i class="fas fa-eye"></i> 1.5K views</span>
+                <span><i class="fas fa-heart"></i> 112</span>
+                <span><i class="fas fa-comment"></i> 18</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-item">
+            <div class="video-thumbnail">
+              <img src="https://via.placeholder.com/320x180" alt="Embroidery" />
+              <span class="video-duration">5:27</span>
+              <button class="play-btn"><i class="fas fa-play"></i></button>
+            </div>
+            <div class="video-info">
+              <h3>Phulkari Embroidery Showcase</h3>
+              <p class="video-creator">Gurpreet Kaur</p>
+              <p class="video-location">
+                <i class="fas fa-map-marker-alt"></i> Patiala, Punjab
+              </p>
+              <div class="video-stats">
+                <span><i class="fas fa-eye"></i> 2.3K views</span>
+                <span><i class="fas fa-heart"></i> 187</span>
+                <span><i class="fas fa-comment"></i> 31</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pagination">
+          <button class="pagination-btn active">1</button>
+          <button class="pagination-btn">2</button>
+          <button class="pagination-btn">3</button>
+          <button class="pagination-btn">4</button>
+          <button class="pagination-btn">
+            <i class="fas fa-ellipsis-h"></i>
+          </button>
+          <button class="pagination-btn">10</button>
+          <button class="pagination-btn next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>SkillTube</h3>
+          <p>Empowering skilled workers through digital presence</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 SkillTube - All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

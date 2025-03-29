@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Your Work - SkillTube</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="https://via.placeholder.com/150x50" alt="SkillTube Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for crafts, artisans..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </header>
+
+    <main class="upload-main">
+      <div class="upload-container">
+        <h1>Share Your Craftsmanship</h1>
+        <p class="upload-intro">
+          Showcase your skills to thousands of art enthusiasts and potential
+          customers
+        </p>
+
+        <form id="uploadForm" class="upload-form">
+          <div class="form-group">
+            <label for="artisanName">Full Name</label>
+            <input
+              type="text"
+              id="artisanName"
+              name="artisanName"
+              placeholder="Your name"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="craftType">Type of Craft</label>
+            <select id="craftType" name="craftType" required>
+              <option value="" selected disabled>Select your craft</option>
+              <option value="textile">Textiles & Clothing</option>
+              <option value="pottery">Pottery & Ceramics</option>
+              <option value="jewelry">Jewelry Making</option>
+              <option value="woodwork">Woodworking</option>
+              <option value="painting">Painting & Fine Arts</option>
+              <option value="handicraft">Handicrafts</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="workDescription">Description of Your Work</label>
+            <textarea
+              id="workDescription"
+              name="workDescription"
+              placeholder="Tell us about your craft, techniques, materials used, and the story behind it..."
+              rows="5"
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="experience">Years of Experience</label>
+            <input
+              type="number"
+              id="experience"
+              name="experience"
+              min="0"
+              max="100"
+              placeholder="E.g. 15"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="location">Your Location</label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+              placeholder="City, State"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="contact">Contact Number</label>
+            <input
+              type="tel"
+              id="contact"
+              name="contact"
+              placeholder="Your phone number"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Your email address"
+            />
+          </div>
+
+          <div class="form-group upload-file">
+            <label for="videoUpload">Upload Video of Your Work</label>
+            <div class="file-upload-container">
+              <div class="file-upload-area" id="dropZone">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Drag and drop your video here or click to browse</p>
+                <input
+                  type="file"
+                  id="videoUpload"
+                  name="videoUpload"
+                  accept="video/*"
+                  hidden
+                />
+                <button type="button" id="browseBtn" class="browse-btn">
+                  Browse Files
+                </button>
+              </div>
+              <div class="upload-preview" id="uploadPreview"></div>
+            </div>
+            <p class="upload-info">
+              Maximum file size: 500MB. Supported formats: MP4, MOV, AVI
+            </p>
+          </div>
+
+          <div class="form-group">
+            <label for="thumbnailUpload"
+              >Upload Thumbnail Image (Optional)</label
+            >
+            <div class="thumbnail-upload">
+              <input
+                type="file"
+                id="thumbnailUpload"
+                name="thumbnailUpload"
+                accept="image/*"
+              />
+            </div>
+          </div>
+
+          <div class="form-group tags-group">
+            <label for="tags">Tags (helps people find your work)</label>
+            <input
+              type="text"
+              id="tags"
+              name="tags"
+              placeholder="Add tags separated by commas (e.g., pottery, handmade, vase)"
+            />
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-container">
+              <input
+                type="checkbox"
+                id="termsAgreement"
+                name="termsAgreement"
+                required
+              />
+              <span class="checkmark"></span>
+              I agree to the <a href="#">Terms and Conditions</a> and
+              <a href="#">Privacy Policy</a>
+            </label>
+          </div>
+
+          <div class="form-buttons">
+            <button type="submit" class="btn primary-btn">
+              Upload and Publish
+            </button>
+            <button type="button" class="btn secondary-btn" id="saveAsDraft">
+              Save as Draft
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="upload-tips">
+        <h3>Tips for a Great Video</h3>
+        <ul>
+          <li>
+            <i class="fas fa-check"></i> Ensure good lighting so your craft
+            details are visible
+          </li>
+          <li>
+            <i class="fas fa-check"></i> Keep your video between 2-5 minutes
+          </li>
+          <li>
+            <i class="fas fa-check"></i> Include close-ups of intricate work
+          </li>
+          <li>
+            <i class="fas fa-check"></i> Briefly explain your process and
+            techniques
+          </li>
+          <li>
+            <i class="fas fa-check"></i> Mention your availability for custom
+            orders
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>SkillTube</h3>
+          <p>Empowering skilled workers through digital presence</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 SkillTube - All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
