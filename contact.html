@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - SkillTube</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="logo.jpg" alt="SkillTube Logo" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search for crafts, artisans..." />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+    </header>
+
+    <main class="contact-main">
+      <section class="contact-hero">
+        <div class="contact-hero-content">
+          <h1>Get In Touch</h1>
+          <p>
+            We'd love to hear from you! Have questions, suggestions, or want to
+            collaborate?
+          </p>
+        </div>
+      </section>
+
+      <section class="contact-content">
+        <div class="contact-container">
+          <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>
+              Reach out to us through any of the following channels. Our team is
+              ready to assist you!
+            </p>
+
+            <div class="contact-details">
+              <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h3>Our Location</h3>
+                  <p>
+                    SkillTube Headquarters<br />
+                    123 Craft Street, Innovation Park<br />
+                    Bengaluru, Karnataka 560001
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>
+                    General Inquiries:
+                    <a href="mailto:info@skilltube.in">info@skilltube.in</a
+                    ><br />
+                    Artisan Support:
+                    <a href="mailto:artisans@skilltube.in"
+                      >artisans@skilltube.in</a
+                    ><br />
+                    Media Relations:
+                    <a href="mailto:media@skilltube.in">media@skilltube.in</a>
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>
+                    Toll-Free: 1800-SKILL-TUBE (1800-123-4567)<br />
+                    International: +91 80 2345 6789
+                  </p>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h3>Office Hours</h3>
+                  <p>
+                    Monday - Friday: 9:00 AM - 6:00 PM IST<br />
+                    Saturday: 10:00 AM - 2:00 PM IST<br />
+                    Sunday: Closed
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-connect">
+              <h3>Connect With Us</h3>
+              <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your full name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone Number (Optional)</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter your phone number"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="artisan">Artisan Support</option>
+                  <option value="partnership">Partnership Opportunities</option>
+                  <option value="technical">Technical Support</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="6"
+                  placeholder="Type your message here..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="checkbox-container">
+                <input type="checkbox" id="subscribe" name="subscribe" />
+                <label for="subscribe"
+                  >Subscribe to our newsletter for updates on new artisans and
+                  craft techniques</label
+                >
+              </div>
+
+              <button type="submit" class="btn primary-btn">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How can I register as an artisan on SkillTube?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                To register as an artisan, click on the "Add Your Work" button
+                on our homepage and follow the registration process. You'll need
+                to provide some basic information about yourself and your craft,
+                along with a verification of your craftsmanship.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>How does the payment system work for artisans?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Once you upload your work and set prices, customers can place
+                orders directly. We handle the payment processing and release
+                funds to your registered bank account within 5-7 business days
+                after order fulfillment. We charge a small platform fee of 8%
+                per transaction.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Can I ship my products internationally?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes! SkillTube supports international shipping. When you list
+                your products, you can specify your shipping preferences. We
+                have partnered with several logistics providers to ensure your
+                crafts reach customers worldwide safely.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">
+              <h3>Does SkillTube offer any training for artisans?</h3>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              <p>
+                Yes, we regularly organize digital workshops on product
+                photography, pricing strategies, and online marketing
+                specifically tailored for traditional artisans. Check our
+                "Artisan Resources" section for upcoming workshops.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="map-section">
+        <h2>Visit Our Office</h2>
+        <div class="map-container">
+          <!-- This would be replaced with an actual map embed -->
+          <div class="map-placeholder">
+            <img
+              src="https://via.placeholder.com/1200x400"
+              alt="Office Location Map"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>SkillTube</h3>
+          <p>Empowering skilled workers through digital presence</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Connect With Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 SkillTube - All Rights Reserved</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

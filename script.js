@@ -168,3 +168,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // Load data when the page loads
   loadFormData();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Existing code remains unchanged
+
+  // Experience slider functionality
+  const experienceSlider = document.getElementById("experienceFilter");
+  const experienceValue = document.querySelector(".experience-value");
+
+  if (experienceSlider && experienceValue) {
+    // Update the display value when slider moves
+    experienceSlider.addEventListener("input", function () {
+      experienceValue.textContent = experienceSlider.value + "+ years";
+    });
+
+    // Initialize with default value
+    experienceValue.textContent = experienceSlider.value + "+ years";
+  }
+
+  // Rest of your existing code
+});
